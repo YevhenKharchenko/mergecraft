@@ -1,15 +1,25 @@
+body {
+  background-image: url(../img/hero/hero-bg-mob.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+
+  @include media(desktop) {
+    background-image: url(../img/hero/hero-bg-desk.png);
+  }
+}
+
 .header {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 42px;
+  padding-bottom: 42px;
   position: fixed;
   width: 100%;
   top: 0;
-  background: linear-gradient(180deg, #019df1 0%, #017bbb 44%, #015886 100%);
   z-index: 10;
 
   @include media(desktop) {
-    padding-top: 32.5px;
-    padding-bottom: 34.5px;
+    padding-top: 38px;
+    padding-bottom: 38px;
   }
 }
 
@@ -19,7 +29,7 @@
   justify-content: end;
 
   @include media(desktop) {
-    justify-content: center;
+    display: block;
   }
 }
 
@@ -28,66 +38,31 @@
 
   @include media(desktop) {
     display: flex;
-    gap: 120px;
+    justify-content: space-between;
   }
 }
 
 .nav-list-link {
-  font-family: 'Fredoka One', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: $_white_text_color;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #caf903;
-    box-shadow: 0 0 2px 0 #000;
-    opacity: 0;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-    transform-origin: left;
-  }
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3a291a;
 
   &:hover,
   &.active {
     color: #caf903;
-    text-shadow: 0 0 2px 0 #000;
-
-    &::after {
-      opacity: 1;
-      transform: scaleX(1);
-    }
   }
 }
 
 .nav-list-link.active {
   color: #caf903;
-  text-shadow: 0 0 2px 0 #000;
-  position: relative;
-}
-
-.nav-list-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #caf903;
-  box-shadow: 0 0 2px 0 #000;
 }
 
 .nav-btn {
   background-color: transparent;
-  width: 28px;
-  height: 28px;
+  width: 48px;
+  height: 48px;
 
   @include media(desktop) {
     display: none;
@@ -97,8 +72,8 @@
 .close-btn {
   display: none;
   background-color: transparent;
-  width: 28px;
-  height: 28px;
+  width: 48px;
+  height: 48px;
 
   @include media(desktop) {
     display: none;

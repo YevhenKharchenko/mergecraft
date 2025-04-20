@@ -1,15 +1,13 @@
 .context-menu {
   display: none;
-  backdrop-filter: blur(24px);
-  background: #c0eefe;
-  padding: 49px 0px 70px 61px;
-  border-bottom: 2px solid #260036;
+  background: $_main_bg_color;
+  padding: 136px 112px 302px 112px;
   max-width: 375px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   position: fixed;
-  top: 60px;
+  top: 104px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -18,15 +16,16 @@
 .context-nav-list {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 38px;
   text-align: left;
 }
 
 .context-list-link {
-  font-family: 'Fredoka One', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: #260036;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3a291a;
   transition: all 0.3s ease-in-out;
 
   &:active {
