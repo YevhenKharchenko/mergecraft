@@ -5,7 +5,11 @@ body {
   background-size: contain;
 
   @include media(desktop) {
-    background-image: url(../img/hero/hero-bg-desk.png);
+    background-image: url(../img/hero/hero-bg-desk.png),
+      url(../img/hero/hero-green-desk.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, top 820px left 0;
+    background-size: contain, auto;
   }
 }
 
