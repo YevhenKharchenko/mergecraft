@@ -11,15 +11,20 @@ body {
 
 .header {
   padding-top: 42px;
-  padding-bottom: 42px;
+  padding-bottom: 22px;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 10;
+  background-image: url(../img/hero/hero-bg-mob.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
 
   @include media(desktop) {
     padding-top: 38px;
     padding-bottom: 38px;
+    background-image: url(../img/hero/hero-bg-desk.png);
   }
 }
 

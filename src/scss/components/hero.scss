@@ -1,20 +1,20 @@
 .hero-section {
   padding-top: 239px;
   padding-bottom: 287px;
-  background-image: url(../img/hero/hero-tablet-mob.png),
-    url(../img/hero/hero-bg-mob.jpg);
-  background-repeat: no-repeat, no-repeat;
-  background-position: center bottom, center;
-  background-size: 375px 386px, cover;
+  // background-image: url(../img/hero/hero-tablet-mob.png),
+  // url(../img/hero/hero-bg-mob.jpg);
+  // background-repeat: no-repeat, no-repeat;
+  // background-position: center bottom, center;
+  // background-size: 375px 386px, cover;
   scroll-margin-top: 60px;
 
   @include media(desktop) {
     padding-top: 171px;
     padding-bottom: 186px;
-    background-image: url(../img/hero/hero-bg-desk.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    // background-image: url(../img/hero/hero-bg-desk.jpg);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
     scroll-margin-top: 60px;
   }
 }
