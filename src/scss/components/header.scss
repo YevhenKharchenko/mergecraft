@@ -29,6 +29,7 @@ body {
   padding-bottom: 22px;
   position: fixed;
   width: 100%;
+  max-width: 375px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -43,6 +44,7 @@ body {
     padding-bottom: 38px;
     background-image: url(../img/hero/hero-bg-desk.png);
     background-size: 1440px auto;
+    max-width: 1440px;
   }
 }
 

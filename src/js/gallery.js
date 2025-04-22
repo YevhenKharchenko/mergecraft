@@ -19,7 +19,6 @@ gallerySwiper = new Swiper('.gallery-swiper-container', {
   breakpoints: {
     1440: {
       initialSlide: 2,
-      spaceBetween: 0,
     },
   },
   on: {

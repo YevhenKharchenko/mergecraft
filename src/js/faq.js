@@ -1,50 +1,23 @@
-import Swiper from 'swiper';
-import 'swiper/css/bundle';
+const faqBtns = document.querySelectorAll('.faq-top-text-btn');
+faqBtns.forEach(btn => btn.addEventListener('click', onBtnClick));
 
-const faqLeftArrow = document.getElementById('faqLeftArrow');
-const faqRightArrow = document.getElementById('faqRightArrow');
+function onBtnClick(e) {
+  const faqTop = e.currentTarget;
+  const faqContainer = faqTop.closest('.faq-list-item');
 
-let faqSwiper;
+  document.querySelectorAll('.faq-list-item').forEach(item => {
+    if (item !== faqContainer) {
+      item.classList.remove('faq-open');
+      item.querySelector('.faq-bottom-text').classList.remove('is-visible');
+    }
+  });
 
-faqSwiper = new Swiper('.faq-swiper-container', {
-  direction: 'horizontal',
-  loop: false,
-  grabCursor: true,
-  slidesPerView: 1,
-  initialSlide: 0,
-  spaceBetween: 12,
-  grabCursor: true,
-  allowTouchMove: true,
-  speed: 500,
-  breakpoints: {
-    1440: {
-      initialSlide: 1,
-      spaceBetween: 22,
-    },
-  },
-  on: {
-    init: () => {
-      document.querySelector('.faq-swiper-container').classList.add('show');
-    },
-    slideChange: () => {
-      updateFaqArrows();
-    },
-  },
-});
+  const bottomText = faqContainer.querySelector('.faq-bottom-text');
+  bottomText.classList.toggle('is-visible');
 
-updateFaqArrows();
-
-function updateFaqArrows() {
-  if (faqSwiper) {
-    faqLeftArrow.disabled = faqSwiper.isBeginning;
-    faqRightArrow.disabled = faqSwiper.isEnd;
+  if (bottomText.classList.contains('is-visible')) {
+    faqContainer.classList.add('faq-open');
+  } else {
+    faqContainer.classList.remove('faq-open');
   }
 }
-
-faqLeftArrow.addEventListener('click', () => {
-  faqSwiper.slidePrev();
-});
-
-faqRightArrow.addEventListener('click', () => {
-  faqSwiper.slideNext();
-});
