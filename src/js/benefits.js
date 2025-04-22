@@ -3,19 +3,19 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css/bundle';
 import { observeSwiperAutoplay } from './observer.js';
 
-Swiper.use([Autoplay]);
+// Swiper.use([Autoplay]);
 
-const benefitsSwiperEl = document.querySelector('.benefits-swiper-container');
+const featuresSwiperEl = document.querySelector('.features-swiper-container');
 
-let benefitsSwiper;
+let featuresSwiper;
 
-benefitsSwiper = new Swiper('.benefits-swiper-container', {
+featuresSwiper = new Swiper('.features-swiper-container', {
   direction: 'horizontal',
   loop: true,
   grabCursor: true,
   slidesPerView: 1,
   initialSlide: 0,
-  spaceBetween: 40,
+  spaceBetween: 20,
   grabCursor: true,
   allowTouchMove: true,
   speed: 500,
@@ -26,17 +26,37 @@ benefitsSwiper = new Swiper('.benefits-swiper-container', {
   breakpoints: {
     1440: {
       loop: false,
-      initialSlide: 2,
-      slidesPerView: 5,
+      initialSlide: 0,
+      slidesPerView: 4,
     },
   },
   on: {
     init: () => {
       document
-        .querySelector('.benefits-swiper-container')
+        .querySelector('.features-swiper-container')
         .classList.add('show');
+    },
+    slideChange: () => {
+      updateFeaturesArrows();
     },
   },
 });
 
-observeSwiperAutoplay(benefitsSwiper, benefitsSwiperEl);
+updateFeaturesArrows();
+
+function updateFeaturesArrows() {
+  if (featuresSwiper) {
+    featuresLeftArrow.disabled = featuresSwiper.isBeginning;
+    featuresRightArrow.disabled = featuresSwiper.isEnd;
+  }
+}
+
+featuresLeftArrow.addEventListener('click', () => {
+  featuresSwiper.slidePrev();
+});
+
+featuresRightArrow.addEventListener('click', () => {
+  featuresSwiper.slideNext();
+});
+
+// observeSwiperAutoplay(featuresSwiper, featuresSwiperEl);

@@ -2,14 +2,25 @@ body {
   background-image: url(../img/hero/hero-bg-mob.png);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: contain;
+  background-size: 375px 820px;
 
   @include media(desktop) {
-    background-image: url(../img/hero/hero-bg-desk.png),
-      url(../img/hero/hero-green-desk.png);
-    background-repeat: no-repeat, no-repeat;
-    background-position: top center, top 820px left 0;
-    background-size: contain, auto;
+    background-image: url(../img/hero/hero-bg-desk.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 1440px 820px;
+  }
+}
+
+.header-bg-wrapper {
+  @include media(desktop) {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../img/hero/hero-green-desk.png);
+    background-repeat: no-repeat;
+    background-position: top 820px left 0;
+    background-size: 250px 261px;
   }
 }
 
@@ -19,16 +30,19 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
   background-image: url(../img/hero/hero-bg-mob.png);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: cover;
+  background-size: 375px auto;
 
   @include media(desktop) {
     padding-top: 38px;
     padding-bottom: 38px;
     background-image: url(../img/hero/hero-bg-desk.png);
+    background-size: 1440px auto;
   }
 }
 

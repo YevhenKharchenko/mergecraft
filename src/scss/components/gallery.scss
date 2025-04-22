@@ -88,12 +88,12 @@
   align-items: center;
 
   &:active {
-    transform: scale(0.9);
+    // transform: scale(0.9);
   }
 
   @include media(desktop) {
     &:hover {
-      transform: scale(1.1);
+      // transform: scale(1.1);
     }
   }
 
