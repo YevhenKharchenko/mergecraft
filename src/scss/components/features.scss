@@ -27,9 +27,13 @@
 
 .features-title {
   margin-bottom: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @include media(desktop) {
     margin-bottom: 34px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 

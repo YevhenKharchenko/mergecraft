@@ -14,13 +14,6 @@
 }
 
 .about-container {
-  padding-left: 18px;
-  padding-right: 18px;
-
-  @include media(desktop) {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
 }
 
 .about-title {

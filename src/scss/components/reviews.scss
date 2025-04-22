@@ -1,0 +1,105 @@
+.reviews-section {
+  padding-top: 0px;
+  padding-bottom: 80px;
+  scroll-margin-top: 60px;
+
+  @include media(desktop) {
+    scroll-margin-top: 70px;
+    padding-bottom: 150px;
+  }
+}
+
+.reviews-section-wrapper {
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+
+  @include media(desktop) {
+    max-width: 1440px;
+  }
+}
+
+.reviews-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.reviews-title {
+  margin-bottom: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include media(desktop) {
+    margin-bottom: 34px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.reviews-swiper-container {
+  max-width: 305px;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: hidden;
+
+  @include media(desktop) {
+    max-width: 1440px;
+  }
+}
+
+.reviews-swiper-container.show {
+  visibility: visible;
+}
+
+.reviews-slide {
+  border-radius: 8px;
+  background-color: #b9d466;
+  padding: 22px 25px;
+  max-width: 305px;
+  height: 231px !important;
+}
+
+.reviews-rating-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 16px;
+}
+
+.reviews-text {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3a291a;
+  word-break: break-word;
+  margin-bottom: 18px;
+}
+
+.reviews-avatar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.reviews-name {
+  font-family: 'Sigmar One', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  color: #a92b04;
+}
+
+.reviews-controls {
+  display: none;
+
+  @include media(desktop) {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
+}
