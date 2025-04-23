@@ -2,8 +2,9 @@
   display: none;
   background: $_main_bg_color;
   padding: 136px 112px 302px 112px;
-  max-width: 375px;
+  max-width: 376px;
   width: 100%;
+  height: 100%;
   margin-right: auto;
   margin-left: auto;
   position: fixed;
@@ -11,6 +12,10 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  background-image: url(../img/menu/menu-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 0;
+  background-size: 231px 229px;
 }
 
 .context-nav-list {
@@ -29,7 +34,7 @@
   transition: all 0.3s ease-in-out;
 
   &:active {
-    color: $_white_text_color;
+    color: #a92b04;
   }
 }
 

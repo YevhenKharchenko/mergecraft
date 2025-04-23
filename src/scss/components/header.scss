@@ -29,7 +29,7 @@ body {
   padding-bottom: 22px;
   position: fixed;
   width: 100%;
-  max-width: 375px;
+  max-width: 376px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -76,12 +76,12 @@ body {
 
   &:hover,
   &.active {
-    color: #caf903;
+    color: #a92b04;
   }
 }
 
 .nav-list-link.active {
-  color: #caf903;
+  color: #a92b04;
 }
 
 .nav-btn {
@@ -103,4 +103,8 @@ body {
   @include media(desktop) {
     display: none;
   }
+}
+
+.menu-open-bg {
+  background: $_main_bg_color;
 }

@@ -1,19 +1,11 @@
 .advantages-section {
   padding-top: 0;
   padding-bottom: 80px;
-  scroll-margin-top: 60px;
+  scroll-margin-top: 120px;
 
   @include media(desktop) {
-    scroll-margin-top: 70px;
     padding-bottom: 150px;
-    // background-image: url(../img/advantages/advantages-ladder.png);
-    // background-repeat: no-repeat;
-    // background-position: bottom 96px center;
-    // background-size: 118px 234px;
   }
-}
-
-.advantages-container {
 }
 
 .advantages-title {
@@ -51,12 +43,6 @@
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.advantages-item-img {
-}
-
-.advantages-item-text-wrapper {
 }
 
 .advantages-item-title {

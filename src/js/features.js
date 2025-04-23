@@ -1,9 +1,5 @@
 import Swiper from 'swiper';
-import { Autoplay } from 'swiper/modules';
 import 'swiper/css/bundle';
-import { observeSwiperAutoplay } from './observer.js';
-
-// Swiper.use([Autoplay]);
 
 const featuresSwiperEl = document.querySelector('.features-swiper-container');
 
@@ -11,7 +7,7 @@ let featuresSwiper;
 
 featuresSwiper = new Swiper('.features-swiper-container', {
   direction: 'horizontal',
-  loop: true,
+  loop: false,
   grabCursor: true,
   slidesPerView: 1,
   initialSlide: 0,
@@ -58,5 +54,3 @@ featuresLeftArrow.addEventListener('click', () => {
 featuresRightArrow.addEventListener('click', () => {
   featuresSwiper.slideNext();
 });
-
-// observeSwiperAutoplay(featuresSwiper, featuresSwiperEl);

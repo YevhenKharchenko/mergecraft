@@ -1,10 +1,21 @@
+.features-bg-wrapper {
+  @include media(desktop) {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../img/features/features-green-desk.png);
+    background-repeat: no-repeat;
+    background-position: top 405px right 0;
+    background-size: 354px 369px;
+  }
+}
+
 .features-section {
   padding-top: 0px;
   padding-bottom: 80px;
-  scroll-margin-top: 60px;
+  scroll-margin-top: 120px;
 
   @include media(desktop) {
-    scroll-margin-top: 70px;
     padding-bottom: 150px;
   }
 }

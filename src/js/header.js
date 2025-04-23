@@ -1,6 +1,7 @@
 const contextMenu = document.querySelector('.context-menu');
 const menuBtn = document.querySelector('.nav-btn');
 const closeContextBtn = document.querySelector('.close-btn');
+const header = document.querySelector('header');
 
 menuBtn.addEventListener('click', onMenuButtonClick);
 
@@ -13,6 +14,7 @@ function onMenuButtonClick() {
   contextMenu.classList.add('is-open');
   menuBtn.classList.add('closed');
   closeContextBtn.classList.add('is-open');
+  header.classList.add('menu-open-bg');
 
   contextMenu.addEventListener('click', onContextMenuLinkClick);
   closeContextBtn.addEventListener('click', onCloseContextButtonClick);
@@ -24,6 +26,7 @@ function onCloseContextButtonClick() {
   contextMenu.classList.remove('is-open');
   closeContextBtn.classList.remove('is-open');
   menuBtn.classList.remove('closed');
+  header.classList.remove('menu-open-bg');
 
   contextMenu.removeEventListener('click', onContextMenuLinkClick);
   closeContextBtn.removeEventListener('click', onCloseContextButtonClick);
@@ -58,7 +61,7 @@ const sections = sectionIds
 const observerOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.9,
+  threshold: 0.8,
 };
 
 const observer = new IntersectionObserver(entries => {

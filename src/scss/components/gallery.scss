@@ -1,20 +1,17 @@
 .gallery-section {
-  padding-bottom: 58px;
-  scroll-margin-top: 60px;
-
-  @include media(desktop) {
-    scroll-margin-top: 80px;
-    padding-bottom: 150px;
-  }
+  scroll-margin-top: 120px;
 }
 
 .gallery-background-wrapper {
+  padding-bottom: 58px;
   max-width: 375px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+  position: relative;
 
   @include media(desktop) {
+    padding-bottom: 150px;
     max-width: 1440px;
   }
 }
@@ -83,12 +80,12 @@
   align-items: center;
 
   &:active {
-    // transform: scale(0.9);
+    transform: scale(0.9);
   }
 
   @include media(desktop) {
     &:hover {
-      // transform: scale(1.1);
+      transform: scale(1.1);
     }
   }
 
@@ -99,5 +96,17 @@
     &:hover {
       transform: none;
     }
+  }
+}
+
+.gallery-green-bg {
+  display: none;
+
+  @include media(desktop) {
+    display: block;
+    position: absolute;
+    bottom: 16px;
+    right: 0;
+    z-index: 2;
   }
 }

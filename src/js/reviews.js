@@ -1,9 +1,5 @@
 import Swiper from 'swiper';
-import { Autoplay } from 'swiper/modules';
 import 'swiper/css/bundle';
-import { observeSwiperAutoplay } from './observer.js';
-
-// Swiper.use([Autoplay]);
 
 const reviewsSwiperEl = document.querySelector('.reviews-swiper-container');
 
@@ -11,7 +7,7 @@ let reviewsSwiper;
 
 reviewsSwiper = new Swiper('.reviews-swiper-container', {
   direction: 'horizontal',
-  loop: true,
+  loop: false,
   grabCursor: true,
   slidesPerView: 1,
   initialSlide: 0,
@@ -56,5 +52,3 @@ reviewsLeftArrow.addEventListener('click', () => {
 reviewsRightArrow.addEventListener('click', () => {
   reviewsSwiper.slideNext();
 });
-
-// observeSwiperAutoplay(reviewsSwiper, reviewsSwiperEl);

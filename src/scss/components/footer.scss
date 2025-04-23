@@ -28,9 +28,6 @@
   }
 }
 
-.footer-nav {
-}
-
 .footer-list {
   display: flex;
   flex-direction: column;
@@ -44,9 +41,6 @@
   }
 }
 
-.footer-list-item {
-}
-
 .footer-link {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -54,9 +48,4 @@
   line-height: 1.5;
   color: #b9d466;
   transition: color 0.3s ease-in-out;
-
-  &:hover,
-  &:focus {
-    color: #caf903;
-  }
 }
