@@ -79,3 +79,13 @@ const observer = new IntersectionObserver(entries => {
 }, observerOptions);
 
 sections.forEach(section => observer.observe(section));
+
+window.addEventListener('resize', onWindowResize);
+
+function onWindowResize() {
+  const isDesktop = window.innerWidth >= 1440;
+
+  if (isDesktop && contextMenuIsOpen) {
+    onCloseContextButtonClick();
+  }
+}
